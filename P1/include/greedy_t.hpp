@@ -18,7 +18,7 @@ class greedy_t
         const sky_t& sky_;
 
     public:
-        greedy_t(const sky_t sky):
+        greedy_t(const sky_t& sky):
         sky_(sky) {}
     
         ~greedy_t(void) {}
