@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <iostream>
+#include <fstream>
 #include <vector>
 
 #include "point_t.hpp"
@@ -17,7 +18,11 @@ int main(void)
     
     sky.generate(1000, 1000, 600);
     
-    cout << sky << endl;
+    ofstream os("CyA.tsp");
+
+    os << sky << endl;
+
+    os.close();
     
     CyA::greedy_t G(sky);
     

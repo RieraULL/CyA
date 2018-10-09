@@ -17,14 +17,10 @@ namespace CyA
         
         ~sky_t(void) {}
         
-        void read(istream& is);
         void write(ostream& os) const;
         void generate(int x_sz, int y_sz, int sz);
 };
 
 }
-
-
-istream& operator>>(istream& is, CyA::sky_t& a);
 
 ostream& operator<<(ostream& os, const CyA::sky_t& a);

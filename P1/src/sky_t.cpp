@@ -1,26 +1,23 @@
 #include "sky_t.hpp"
 
-
 namespace CyA
 {
-        void sky_t::read(istream& is)
-        {
-            int sz;
-            is >> sz;
-            
-            resize(sz);
-            
-            for(int i = 0; i < sz; i++)
-                is >> at(i);    
-        }
-        
         void sky_t::write(ostream& os) const
         {
+            os << "NAME: CyA"<< size() << endl; 
+            os << "TYPE: TSP" << endl;
+            os << "COMMENT: Testing problem from CyA of " << size() << "-city TSP" << endl;
+            os << "DIMENSION: " << size() << endl;
+            os << "EDGE_WEIGHT_TYPE: EUC_2D" << endl;
+            os << "DISPLAY_DATA_TYPE: COORD_DISPLAY" << endl;
+            os << "NODE_COORD_SECTION" << endl;
+
             const int sz = size();
-            os << sz << endl;
             
             for(int i = 0; i < sz; i++)
-                os << at(i) << endl;
+                os << setw(4) << i + 1 << " " << at(i) << endl;
+
+            os << "EOF" << endl;
         }
         
         void sky_t::generate(int x_sz, int y_sz, int sz)
@@ -39,12 +36,6 @@ namespace CyA
                 push_back(point_t(x, y));
             }
         }
-}
-
-istream& operator>>(istream& is, CyA::sky_t& a)
-{
-    a.read(is);
-    return is;
 }
 
 ostream& operator<<(ostream& os, const CyA::sky_t& a)
