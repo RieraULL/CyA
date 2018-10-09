@@ -26,6 +26,8 @@ $(ODIR)/main.o: $(ODIR)/main.cpp $(IDIR)/greedy_t.hpp $(IDIR)/sky_t.hpp $(IDIR)/
 
 greedy: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+	./greedy
+	./concorde CyA.tsp
 
 .PHONY: clean
 
