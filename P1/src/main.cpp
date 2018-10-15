@@ -28,7 +28,8 @@ int main(void)
     
     vector<CyA::point_t> sequence;
     
-    cout << G.NN(sequence) << endl;
+    cout << "Neareas Neighbor: " << G.NN(sequence) << endl;
+    cout << endl;
     
     return 0;
 }

@@ -35,7 +35,7 @@ public:
     
     inline double distance(const point_t& b)
     {
-        return round(sqrt((first - b.first) * (first - b.first) + (second - b.second) * (second - b.second)) + 0.5);
+        return int(sqrt((first - b.first) * (first - b.first) + (second - b.second) * (second - b.second)) + 0.5);
     }
 };
 
