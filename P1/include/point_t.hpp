@@ -33,7 +33,7 @@ public:
     inline const double get_x(void) const {return first;}
     inline const double get_y(void) const {return second;}
     
-    inline double distance(const point_t& b)
+    inline double distance(const point_t& b) const
     {
         return int(sqrt((first - b.first) * (first - b.first) + (second - b.second) * (second - b.second)) + 0.5);
     }
