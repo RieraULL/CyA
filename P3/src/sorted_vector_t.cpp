@@ -51,11 +51,6 @@ void sorted_vector_t::merge(int l, int c, int d)
  
 }
 
-void sorted_vector_t::merge(const vector<int>& v1, const vector<int>& v2, int l)
-{
- 
-}
-
 ////////////////////////////////////////////////////////////////////////////
 
 }
